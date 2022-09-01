@@ -2,9 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_task/core/colors.dart';
 import 'package:flutter_task/core/constants.dart';
+import 'package:flutter_task/view/splash/splash_screen3.dart';
+import 'package:get/get.dart';
 
 class SplashScreen2 extends StatelessWidget {
-  const SplashScreen2({Key? key}) : super(key: key);
+  const SplashScreen2({Key? key,required this.pageController}) : super(key: key);
+  final PageController pageController;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -51,7 +54,9 @@ class SplashScreen2 extends StatelessWidget {
       )),
       floatingActionButton: FloatingActionButton(
         backgroundColor: kbuttonColor,
-        onPressed: () {},
+        onPressed: () {
+          Get.to(SplashScreen3(pageController: pageController));
+        },
         child: const Text('Next'),
       ),
     );

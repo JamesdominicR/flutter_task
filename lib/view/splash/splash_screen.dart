@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_task/core/colors.dart';
 
 import 'package:flutter_task/view/splash/splash_screen1.dart';
 import 'package:flutter_task/view/splash/splash_screen2.dart';
@@ -29,26 +27,12 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: [
-        PageView(children: [
-          SplashScreen1(
-            pageController: _pageController,
-          ),
-          const SplashScreen2(),
-          SplashScreen3(pageController: _pageController)
-        ]),
-        Positioned(
-          left: 10.w,
-          top: 690.h,
-          child: Container(
-            height: 12.h,
-            width: 10.w,
-            decoration: BoxDecoration(
-                color: kbuttonColor, borderRadius: BorderRadius.circular(12)),
-          ),
-        ),
-      ],
-    );
+    return PageView(children: [
+      SplashScreen1(
+        pageController: _pageController,
+      ),
+      SplashScreen2(pageController: _pageController),
+      SplashScreen3(pageController: _pageController)
+    ]);
   }
 }

@@ -43,7 +43,7 @@ class SplashScreen1 extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
         backgroundColor: kbuttonColor,
         onPressed: () {
-          Get.to(const SplashScreen2());
+          Get.to(SplashScreen2(pageController: pageController,));
         },
         child: const Text('Next'),
       ),

@@ -126,6 +126,7 @@ final controller = Get.put(SigninController());
                                       prefixIcon: const Icon(Icons.lock),
                                     ),
                                      controller: _passwordController,
+                                     obscureText: true,
                                     ),  
                                     SizedBox(height: 30.h),
                                     ButtonWidget(title: 'Sign Up', 
